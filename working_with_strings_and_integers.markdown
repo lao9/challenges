@@ -16,9 +16,25 @@ l = "Last"
 Use *only* the "string concatenation" technique to complete the following:
 
 1. What code can you write to output the string `"FirstLast"`?
+
+cat = f + l
+strint = "#{f}#{l}"
+
 2. What code can you write to output the string `"LastFirst"`?
+
+cat = l + f
+strint = "#{l}#{f}
+
 3. What code can you write to output the string `"First Last"`?
+
+cat = f + " " + l
+strint = "#{f} #{l}"
+
 4. What code can you write to output the string `"Last First Last First"`?
+
+cat = l + " " + f + " " + l + " " + f
+strint = "#{l} #{f} #{l} #{f}"
+
 
 Then repeat 1-4 using only the "string interpolation" technique.
 
@@ -32,8 +48,17 @@ name_2 = "Todd Park"
 ```
 
 1. Can you come up with *two* ways to output just the fragment `"Megan"` from `name_1`?
+
+name_1[0..4]
+name_1.split[0]
+
 2. Would either of your techniques from A would work to output `"Todd"` from `name_2`? Why or why not?
+
+Technique one would not technically work because it would include the space after Todd (the 4th index), it would need to be name_2[0..3], but the second technique would.
+
 3. Write code that can output the initials of `name_2`.
+
+initials = name_2.split[0][0] + name_2.split[1][0]
 
 ## Just Integers
 
@@ -47,7 +72,14 @@ d = 98
 ```
 
 1. Write code to find the average of these four numbers.
+
+array = [a, b, c, d]
+avg = (a + b + c + d)/array.length
+
 2. Find the average yourself using paper or a calculator. Is your answer different than you found in A? Why?
+
+The average on the calculator was 51.5, but with code it's only 51. That's because the class of the variables is an integer
+
 3. Say you have the operation `a + b * c / d`. What result do you get out from Ruby? What other outputs can you
 get out by adding one or more pairs of parentheses to the equation?
 
@@ -78,3 +110,5 @@ Say you have an `age` variable that holds the person's age. Write code to output
 There's a silly compression algorithm that outputs the first letter, the number of letters in the middle,
 and the last letter. So for the string `"Kalamazoo"` it'd output `"K7o"` or `"Denver"` would be `"D4r"`.
 Can you write code to implement that?
+
+
