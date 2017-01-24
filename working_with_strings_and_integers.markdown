@@ -80,8 +80,10 @@ avg = (a + b + c + d)/array.length
 
 The average on the calculator was 51.5, but with code it's only 51. That's because the class of the variables is an integer
 
-3. Say you have the operation `a + b * c / d`. What result do you get out from Ruby? What other outputs can you
-get out by adding one or more pairs of parentheses to the equation?
+3. Say you have the operation `a + b * c / d`. What result do you get out from Ruby? What other outputs can you get out by adding one or more pairs of parentheses to the equation?
+
+You get 32, because of order of operations. PEMDAS. So first it multiplies b * c (
+
 
 ## Strings & Integers
 
