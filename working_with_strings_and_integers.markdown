@@ -82,8 +82,13 @@ The average on the calculator was 51.5, but with code it's only 51. That's becau
 
 3. Say you have the operation `a + b * c / d`. What result do you get out from Ruby? What other outputs can you get out by adding one or more pairs of parentheses to the equation?
 
-You get 32, because of order of operations. PEMDAS. So first it multiplies b * c (
+You get 32, because of order of operations. PEMDAS. So first it multiplies b * c (65 * 31 = 2015), then it divides that by d (2015 / 98 = 20.56...) and then you add that to a (12 + 20.56.. = 32.56..). Since we're working with fixnums, then the output is 32. 
 
+You can add a parentheses as follows to get other values:
+
+(a + b) * c / d = 24
+
+a + b * (c / d) = 12
 
 ## Strings & Integers
 
@@ -100,6 +105,9 @@ d = "Grace"
 
 Write code to output both the total characters in all the names together and the average length of the names.
 
+total_char = a.length + b.length + c.length + d.length
+puts "The total length of character of all four names is #{total_char} and the average length of these names is #{total_char/4} characters."
+
 ### Happy Birthday
 
 In our family we like to say "Happy" once for every year of your age when we say "Happy birthday!". So when you turn
@@ -107,10 +115,15 @@ four we'd say "Happy happy happy happy birthday!" Note the capitalization.
 
 Say you have an `age` variable that holds the person's age. Write code to output the appropriate greeting.
 
+puts "Happy" + (" happy"*(age-1)) + " birthday!"
+
+
 ### String Compression
 
 There's a silly compression algorithm that outputs the first letter, the number of letters in the middle,
 and the last letter. So for the string `"Kalamazoo"` it'd output `"K7o"` or `"Denver"` would be `"D4r"`.
 Can you write code to implement that?
 
+middle = city[1...-1]
+output = city[0] + middle.length.to_s + city[-1]
 
